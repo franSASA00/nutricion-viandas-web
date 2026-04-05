@@ -77,7 +77,7 @@ export function Viandas() {
       `🏷️ Categoría: ${vianda.categoria}\n` +
       `💰 Precio: $7.500\n\n` +
       `📍 Mi dirección de entrega: (completar) +
-      `💳 Formas de pago: Transferencia bancaria o efectivo. +
+      `Formas de pago: Transferencia bancaria o efectivo.\n\n` +
       `¿Podrían confirmar disponibilidad y coordinar la entrega?`
     );
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
