@@ -1,5 +1,5 @@
 export function Footer() {
-  const whatsappNumber = "5491123456789"; // Reemplazar con el número real
+  const whatsappNumber = "5493541377939";
   const currentYear = new Date().getFullYear();
 
   return (
