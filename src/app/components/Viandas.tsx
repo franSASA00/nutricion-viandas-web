@@ -8,7 +8,6 @@ interface Vianda {
   imagen: string;
   emoji: string;
   beneficios: string[];
-  precio: string;
 }
 
 const viandas: Vianda[] = [
@@ -20,7 +19,6 @@ const viandas: Vianda[] = [
     imagen: "https://images.unsplash.com/photo-1546069901-04dcb46a5e26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
     emoji: "🥗",
     beneficios: ["Alto en fibra", "Bajo en calorías", "Proteína vegetal"],
-    precio: "$8.500"
   },
   {
     id: "control-peso-2",
@@ -30,7 +28,6 @@ const viandas: Vianda[] = [
     imagen: "https://images.unsplash.com/photo-1642635055753-3eec6c0b2a6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
     emoji: "🍗",
     beneficios: ["Alto en proteínas", "Bajo en grasas", "Rico en vitaminas"],
-    precio: "$9.200"
   },
   {
     id: "hipertrofia-1",
@@ -40,7 +37,6 @@ const viandas: Vianda[] = [
     imagen: "https://images.unsplash.com/photo-1720443000468-89d509202615?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
     emoji: "💪",
     beneficios: ["Alto en proteínas", "Carbohidratos complejos", "Hierro y zinc"],
-    precio: "$10.800"
   },
   {
     id: "hipertrofia-2",
@@ -50,7 +46,6 @@ const viandas: Vianda[] = [
     imagen: "https://images.unsplash.com/photo-1607264021653-0a884a9740cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
     emoji: "🐟",
     beneficios: ["Proteína de calidad", "Grasas saludables", "Anti-inflamatorio"],
-    precio: "$12.500"
   },
   {
     id: "veggie-1",
@@ -60,7 +55,6 @@ const viandas: Vianda[] = [
     imagen: "https://images.unsplash.com/photo-1620019989479-d52fcedd99fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
     emoji: "🌱",
     beneficios: ["100% vegano", "Rico en antioxidantes", "Completo nutricionalmente"],
-    precio: "$8.800"
   },
   {
     id: "express-1",
@@ -70,7 +64,6 @@ const viandas: Vianda[] = [
     imagen: "https://images.unsplash.com/photo-1662714208483-3480ccd2de39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
     emoji: "⚡",
     beneficios: ["Rápido", "Portátil", "Completo"],
-    precio: "$7.500"
   },
 ];
 
@@ -82,24 +75,33 @@ export function Viandas() {
       `¡Hola! Vengo de la web. Me interesa la vianda:\n\n` +
       `📦 Producto: ${vianda.nombre}\n` +
       `🏷️ Categoría: ${vianda.categoria}\n` +
-      `💰 Precio estimado: ${vianda.precio}\n\n` +
+      `💰 Precio: $7.500\n\n` +
       `¿Podrían darme más información y coordinar la entrega?`
     );
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };
 
-  const categorias = ["Todas", ...Array.from(new Set(viandas.map(v => v.categoria)))];
-
   return (
     <section id="viandas" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <h2 className="mb-4">
             Nuestras Viandas Saludables 🍎
           </h2>
           <p className="text-muted-foreground">
             Cada vianda es más que comida: es <strong>tiempo y salud recuperados</strong>.
             Preparadas con amor, frescura y el respaldo científico que tu cuerpo merece.
+          </p>
+        </div>
+
+        {/* Info semanal */}
+        <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 max-w-3xl mx-auto mb-12 text-center">
+          <p className="text-emerald-800 font-medium text-lg mb-2">📅 ¿Cómo funciona?</p>
+          <p className="text-emerald-700">
+            Cada semana publicamos el menú disponible. Podés elegir tu vianda de <strong>lunes a viernes</strong> y coordinar la entrega por WhatsApp.
+          </p>
+          <p className="text-emerald-900 font-bold mt-3 text-xl">
+            💰 Precio único: $7.500 por vianda
           </p>
         </div>
 
@@ -119,7 +121,7 @@ export function Viandas() {
                   <span className="text-sm text-emerald-700">{vianda.emoji} {vianda.categoria}</span>
                 </div>
                 <div className="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-full shadow-md">
-                  <span>{vianda.precio}</span>
+                  <span>$7.500</span>
                 </div>
               </div>
 
