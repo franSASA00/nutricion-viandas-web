@@ -67,16 +67,15 @@ const viandas: Vianda[] = [
   },
 ];
 
-export function Viandas() {
-  const whatsappNumber = "5493541377939";
-
-  const handleViandaClick = (vianda: Vianda) => {
+const handleViandaClick = (vianda: Vianda) => {
     const message = encodeURIComponent(
       `¡Hola! Vengo de la web. Me interesa la vianda:\n\n` +
       `📦 Producto: ${vianda.nombre}\n` +
       `🏷️ Categoría: ${vianda.categoria}\n` +
       `💰 Precio: $7.500\n\n` +
-      `¿Podrían darme más información y coordinar la entrega?`
+      `📍 Mi dirección de entrega: (completar)\n\n` +
+      `💳 Formas de pago aceptadas: Transferencia bancaria y efectivo.\n\n` +
+      `¿Podrían confirmar disponibilidad y coordinar la entrega?`
     );
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };
