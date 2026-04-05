@@ -12,7 +12,7 @@ export function Hero() {
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden" style={{ backgroundImage: `url(${fondoHero})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px]"></div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]"></div>
         <div className="max-w-5xl mx-auto text-center">
           <div className="mb-6 inline-block">
             <span className="bg-emerald-100 text-emerald-700 px-6 py-2 rounded-full inline-flex items-center gap-2">
