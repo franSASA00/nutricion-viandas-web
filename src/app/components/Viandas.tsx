@@ -72,15 +72,15 @@ export function Viandas() {
 
   const handleViandaClick = (vianda: Vianda) => {
     const message = encodeURIComponent(
-      `¡Hola! Vengo de la web. Me interesa la vianda:\n\n` +
-      `📦 Producto: ${vianda.nombre}\n` +
-      `🏷️ Categoría: ${vianda.categoria}\n` +
-      `💰 Precio: $7.500\n\n` +
-      `📍 Mi dirección de entrega: (completar) +
-      `Formas de pago: Transferencia bancaria o efectivo.\n\n` +
-      `¿Podrían confirmar disponibilidad y coordinar la entrega?`
+      "Hola! Vengo de la web. Me interesa la vianda:\n\n" +
+      "Producto: " + vianda.nombre + "\n" +
+      "Categoria: " + vianda.categoria + "\n" +
+      "Precio: $7.500\n\n" +
+      "Mi direccion de entrega: (completar)\n\n" +
+      "Formas de pago: Transferencia bancaria o efectivo.\n\n" +
+      "Podrian confirmar disponibilidad y coordinar la entrega?"
     );
-    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+    window.open("https://wa.me/" + whatsappNumber + "?text=" + message, "_blank");
   };
 
   return (
