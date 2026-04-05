@@ -68,7 +68,7 @@ const viandas: Vianda[] = [
 ];
 
 export function Viandas() {
-  const whatsappNumber = "5491123456789"; // Reemplazar con el número real
+  const whatsappNumber = "5493541373782"; // Reemplazar con el número real
 
   const handleViandaClick = (vianda: Vianda) => {
     const message = encodeURIComponent(
