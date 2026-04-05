@@ -2,7 +2,7 @@ import fondoHero from "../../assets/fondo-hero.jpg";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Hero() {
-const whatsappNumber = "5491123456789";
+const whatsappNumber = "5493541373782";
   const handleCTA = () => {
     const message = encodeURIComponent("¡Hola! Vengo de la web. Quiero conocer más sobre las viandas y servicios de nutrición.");
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
