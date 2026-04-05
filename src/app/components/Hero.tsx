@@ -9,7 +9,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden" style={{ backgroundImage: "url('/assets/fondo-hero.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden" style={{ backgroundImage: `url(${fondoHero})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px]"></div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
