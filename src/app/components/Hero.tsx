@@ -1,3 +1,4 @@
+import fondoHero from "../../assets/fondo-hero.jpg";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Hero() {
