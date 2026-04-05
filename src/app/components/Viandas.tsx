@@ -67,14 +67,17 @@ const viandas: Vianda[] = [
   },
 ];
 
-const handleViandaClick = (vianda: Vianda) => {
+export function Viandas() {
+  const whatsappNumber = "5493541377939";
+
+  const handleViandaClick = (vianda: Vianda) => {
     const message = encodeURIComponent(
       `¡Hola! Vengo de la web. Me interesa la vianda:\n\n` +
       `📦 Producto: ${vianda.nombre}\n` +
       `🏷️ Categoría: ${vianda.categoria}\n` +
       `💰 Precio: $7.500\n\n` +
       `📍 Mi dirección de entrega: (completar)\n\n` +
-      `💳 Formas de pago aceptadas: Transferencia bancaria y efectivo.\n\n` +
+      `💳 Formas de pago: Transferencia bancaria o efectivo.\n\n` +
       `¿Podrían confirmar disponibilidad y coordinar la entrega?`
     );
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
@@ -84,16 +87,13 @@ const handleViandaClick = (vianda: Vianda) => {
     <section id="viandas" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-8">
-          <h2 className="mb-4">
-            Nuestras Viandas Saludables 🍎
-          </h2>
+          <h2 className="mb-4">Nuestras Viandas Saludables 🍎</h2>
           <p className="text-muted-foreground">
             Cada vianda es más que comida: es <strong>tiempo y salud recuperados</strong>.
             Preparadas con amor, frescura y el respaldo científico que tu cuerpo merece.
           </p>
         </div>
 
-        {/* Info semanal */}
         <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 max-w-3xl mx-auto mb-12 text-center">
           <p className="text-emerald-800 font-medium text-lg mb-2">📅 ¿Cómo funciona?</p>
           <p className="text-emerald-700">
@@ -106,16 +106,9 @@ const handleViandaClick = (vianda: Vianda) => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {viandas.map((vianda) => (
-            <div
-              key={vianda.id}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
-            >
+            <div key={vianda.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
               <div className="relative h-56 overflow-hidden bg-gray-100">
-                <ImageWithFallback
-                  src={vianda.imagen}
-                  alt={vianda.nombre}
-                  className="w-full h-full object-cover"
-                />
+                <ImageWithFallback src={vianda.imagen} alt={vianda.nombre} className="w-full h-full object-cover" />
                 <div className="absolute top-4 left-4 bg-white px-3 py-1 rounded-full shadow-md">
                   <span className="text-sm text-emerald-700">{vianda.emoji} {vianda.categoria}</span>
                 </div>
@@ -123,24 +116,16 @@ const handleViandaClick = (vianda: Vianda) => {
                   <span>$7.500</span>
                 </div>
               </div>
-
               <div className="p-6">
                 <h3 className="mb-3 text-gray-900">{vianda.nombre}</h3>
-                <p className="text-muted-foreground mb-4">
-                  {vianda.descripcion}
-                </p>
-
+                <p className="text-muted-foreground mb-4">{vianda.descripcion}</p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {vianda.beneficios.map((beneficio, idx) => (
-                    <span
-                      key={idx}
-                      className="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-sm"
-                    >
+                    <span key={idx} className="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-sm">
                       ✓ {beneficio}
                     </span>
                   ))}
                 </div>
-
                 <button
                   onClick={() => handleViandaClick(vianda)}
                   className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg inline-flex items-center justify-center gap-2"
