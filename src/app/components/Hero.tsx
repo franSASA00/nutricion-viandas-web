@@ -21,15 +21,15 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="mb-6 leading-tight">
-            Comer bien no debería ser un trabajo.<br/>
-            <span className="text-emerald-600">Nutrición real, directo a tu mesa.</span>
-          </h1>
+          <h1 className="mb-6 leading-tight bg-white/60 rounded-xl px-4 py-2 inline-block">
+  Comer bien no debería ser un trabajo.<br/>
+  <span className="text-emerald-600">Nutrición real, directo a tu mesa.</span>
+</h1>
 
-          <p className="mb-8 text-muted-foreground max-w-2xl mx-auto">
-            Viandas diseñadas por profesionales y formación de alto nivel para transformar tu estilo de vida.
-            Recuperá tu tiempo y tu salud con cada plato.
-          </p>
+<p className="mb-8 text-muted-foreground max-w-2xl mx-auto bg-white/60 rounded-xl px-4 py-2">
+  Viandas diseñadas por profesionales y formación de alto nivel para transformar tu estilo de vida.
+  Recuperá tu tiempo y tu salud con cada plato.
+</p>
 
           <div className="flex flex-wrap gap-4 justify-center mb-12">
             <button
