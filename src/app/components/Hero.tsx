@@ -10,7 +10,7 @@ export function Hero() {
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden" style={{ backgroundImage: `url(${fondoHero})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]"></div>
+      <div className="absolute inset-0 bg-white/50 backdrop-blur-[2px]"></div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
@@ -21,12 +21,12 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="mb-6 leading-tight bg-white/80 rounded-xl px-4 py-3 inline-block shadow-md">
+          <h1 className="mb-6 leading-tight bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 inline-block shadow-md">
             Comer bien no debería ser un trabajo.<br/>
             <span className="text-emerald-600">Nutrición real, directo a tu mesa.</span>
           </h1>
 
-          <p className="mb-8 text-muted-foreground max-w-2xl mx-auto bg-white/80 rounded-xl px-4 py-3 shadow-md">
+          <p className="mb-8 text-muted-foreground max-w-2xl mx-auto bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 shadow-md">
             Viandas diseñadas por profesionales y formación de alto nivel para transformar tu estilo de vida.
             Recuperá tu tiempo y tu salud con cada plato.
           </p>
