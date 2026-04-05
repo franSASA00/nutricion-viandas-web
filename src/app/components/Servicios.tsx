@@ -37,7 +37,7 @@ const servicios: Servicio[] = [
 ];
 
 export function Servicios() {
-  const whatsappNumber = "5491123456789"; // Reemplazar con el número real
+  const whatsappNumber = "5493541373782";
 
   const handleServicioClick = (servicio: Servicio) => {
     const message = encodeURIComponent(
