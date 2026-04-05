@@ -3,9 +3,11 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
+  "homepage": "https://franSASA00.github.io/nutricion-viandas-web",
   "scripts": {
     "build": "vite build",
-    "dev": "vite"
+    "dev": "vite",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
