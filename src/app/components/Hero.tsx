@@ -21,7 +21,7 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="mb-6 leading-tight bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 inline-block shadow-md">
+          <h1 className="mb-6 leading-tight bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 block shadow-md">
             Comer bien no debería ser un trabajo.<br/>
             <span className="text-emerald-600">Nutrición real, directo a tu mesa.</span>
           </h1>
