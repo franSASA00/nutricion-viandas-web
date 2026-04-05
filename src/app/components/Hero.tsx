@@ -13,20 +13,21 @@ export function Hero() {
       <div className="absolute inset-0 bg-white/50 backdrop-blur-[2px]"></div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="mb-6 inline-block">
+        <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
+
+          <div className="mb-6">
             <span className="bg-emerald-100 text-emerald-700 px-6 py-2 rounded-full inline-flex items-center gap-2">
               <span className="text-xl">🌿</span>
               <span>Nutrición Profesional</span>
             </span>
           </div>
 
-          <h1 className="mb-6 leading-tight bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 block shadow-md">
+          <h1 className="mb-6 leading-tight bg-white/90 backdrop-blur-sm rounded-xl px-6 py-4 shadow-md w-full max-w-2xl">
             Comer bien no debería ser un trabajo.<br/>
             <span className="text-emerald-600">Nutrición real, directo a tu mesa.</span>
           </h1>
 
-          <p className="mb-8 text-muted-foreground max-w-2xl mx-auto bg-white/90 backdrop-blur-sm rounded-xl px-4 py-3 shadow-md">
+          <p className="mb-8 text-muted-foreground bg-white/90 backdrop-blur-sm rounded-xl px-6 py-4 shadow-md w-full max-w-2xl">
             Viandas diseñadas por profesionales y formación de alto nivel para transformar tu estilo de vida.
             Recuperá tu tiempo y tu salud con cada plato.
           </p>
@@ -48,7 +49,7 @@ export function Hero() {
             </button>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-3xl w-full">
             <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-md">
               <div className="mb-3">✨</div>
               <h3 className="mb-2 text-emerald-700">100% Casero</h3>
