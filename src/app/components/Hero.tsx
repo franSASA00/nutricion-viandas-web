@@ -1,78 +1,64 @@
-import fondoHero from "../../assets/fondo-hero.jpg";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
-
 export function Hero() {
-const whatsappNumber = "5493541377939";
-  const handleCTA = () => {
-    const message = encodeURIComponent("¡Hola! Vengo de la web. Quiero conocer más sobre las viandas y servicios de nutrición.");
+  const whatsappNumber = "5493541377939";
+  
+  const handleOrderClick = () => {
+    const message = encodeURIComponent("Hola! Me interesa conocer sus viandas saludables");
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden" style={{ backgroundImage: `url(${fondoHero})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <div className="absolute inset-0 bg-white/50 backdrop-blur-[2px]"></div>
-
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
-
-          <div className="mb-6">
-            <span className="bg-emerald-100 text-emerald-700 px-6 py-2 rounded-full inline-flex items-center gap-2">
-              <span className="text-xl">🌿</span>
-              <span>Nutrición Profesional</span>
-            </span>
+    <section className="relative bg-gradient-to-br from-emerald-50 via-white to-emerald-50 pt-16 md:pt-20 pb-12 md:pb-16 overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center max-w-4xl mx-auto">
+          {/* Badge */}
+          <div className="inline-block bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-medium mb-4 md:mb-6">
+            🌱 Comida real para tu día a día
           </div>
-
-          <h1 className="mb-6 leading-tight bg-white/90 backdrop-blur-sm rounded-xl px-6 py-4 shadow-md w-full max-w-2xl">
-            Comer bien no debería ser un trabajo.<br/>
-            <span className="text-emerald-600">Nutrición real, directo a tu mesa.</span>
+          
+          {/* Título principal */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-emerald-700 to-emerald-500 bg-clip-text text-transparent">
+            Nutrición que <br className="hidden sm:block" />
+            transforma tu energía
           </h1>
-
-          <p className="mb-8 text-muted-foreground bg-white/90 backdrop-blur-sm rounded-xl px-6 py-4 shadow-md w-full max-w-2xl">
-            Viandas diseñadas por profesionales y formación de alto nivel para transformar tu estilo de vida.
-            Recuperá tu tiempo y tu salud con cada plato.
+          
+          {/* Descripción */}
+          <p className="text-base md:text-lg lg:text-xl text-gray-600 mb-6 md:mb-8 px-2">
+            Viandas saludables, frescas y listas para disfrutar. 
+            Cuidamos tu alimentación para que vos solo te preocupes por brillar.
           </p>
-
-          <div className="flex flex-wrap gap-4 justify-center mb-12">
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
             <button
-              onClick={handleCTA}
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2"
+              onClick={handleOrderClick}
+              className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-6 md:px-8 py-3 md:py-3.5 rounded-xl font-medium transition-all duration-300 shadow-lg hover:shadow-xl active:scale-95 md:active:scale-100"
             >
-              <span>📱</span>
-              <span>Consultar por WhatsApp</span>
+              Pedir mi vianda 📦
             </button>
-            <button
-              onClick={() => document.getElementById('viandas')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-white hover:bg-gray-50 text-emerald-700 border-2 border-emerald-600 px-8 py-4 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg inline-flex items-center gap-2"
+            <a
+              href="#viandas"
+              className="w-full sm:w-auto border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 px-6 md:px-8 py-3 md:py-3.5 rounded-xl font-medium transition-all duration-300 text-center"
             >
-              <span>🥗</span>
-              <span>Ver Menú</span>
-            </button>
+              Ver catálogo 👀
+            </a>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-3xl w-full">
-            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-md">
-              <div className="mb-3">✨</div>
-              <h3 className="mb-2 text-emerald-700">100% Casero</h3>
-              <p className="text-muted-foreground">Preparado como en casa, con ingredientes frescos de calidad</p>
+          
+          {/* Stats o beneficios rápidos - opcional */}
+          <div className="grid grid-cols-3 gap-2 md:gap-4 mt-8 md:mt-12 pt-4 md:pt-8 border-t border-gray-200">
+            <div>
+              <p className="text-xl md:text-2xl font-bold text-emerald-600">+15</p>
+              <p className="text-xs md:text-sm text-gray-500">Viandas</p>
             </div>
-            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-md">
-              <div className="mb-3">🎓</div>
-              <h3 className="mb-2 text-emerald-700">Respaldo Profesional</h3>
-              <p className="text-muted-foreground">Diseñado por Licenciada en Nutrición certificada</p>
+            <div>
+              <p className="text-xl md:text-2xl font-bold text-emerald-600">100%</p>
+              <p className="text-xs md:text-sm text-gray-500">Frescura</p>
             </div>
-            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-md">
-              <div className="mb-3">⏰</div>
-              <h3 className="mb-2 text-emerald-700">Ahorrá Tiempo</h3>
-              <p className="text-muted-foreground">Listo para calentar y disfrutar en minutos</p>
+            <div>
+              <p className="text-xl md:text-2xl font-bold text-emerald-600">24/7</p>
+              <p className="text-xs md:text-sm text-gray-500">Atención</p>
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
       </div>
     </section>
   );
