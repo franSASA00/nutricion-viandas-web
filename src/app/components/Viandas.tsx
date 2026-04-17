@@ -11,7 +11,7 @@ interface Vianda {
   color: "green" | "red";
 }
 
-// SOLO 2 viandas destacadas
+// SOLO 2 VIANDAS DESTACADAS
 const viandasDestacadas: Vianda[] = [
   {
     id: "bowl-mediterraneo",
