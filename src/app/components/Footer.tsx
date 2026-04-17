@@ -4,9 +4,8 @@ export function Footer() {
   
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-6">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {/* Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">🍎 Nutrición & Viandas</h3>
             <p className="text-gray-400 text-sm">
@@ -14,7 +13,6 @@ export function Footer() {
             </p>
           </div>
           
-          {/* Links rápidos */}
           <div>
             <h4 className="font-semibold mb-4">Navegación</h4>
             <ul className="space-y-2 text-sm">
@@ -24,7 +22,6 @@ export function Footer() {
             </ul>
           </div>
           
-          {/* Contacto */}
           <div>
             <h4 className="font-semibold mb-4">Contacto</h4>
             <ul className="space-y-2 text-sm">
@@ -43,7 +40,6 @@ export function Footer() {
             </ul>
           </div>
           
-          {/* Horarios */}
           <div>
             <h4 className="font-semibold mb-4">Horarios</h4>
             <p className="text-gray-400 text-sm">Lun a Vie: 9:00 - 20:00</p>
