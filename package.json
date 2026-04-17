@@ -5,10 +5,11 @@
   "type": "module",
   "homepage": "https://franSASA00.github.io/nutricion-viandas-web",
   "scripts": {
-    "build": "vite build",
-    "dev": "vite",
-    "deploy": "gh-pages -d dist"
-  },
+  "dev": "vite --host",
+  "build": "vite build",
+  "preview": "vite preview",
+  "deploy": "pnpm run build && npx gh-pages -d dist"
+},
   "dependencies": {
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.1",

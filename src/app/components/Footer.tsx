@@ -1,43 +1,54 @@
 export function Footer() {
-  const whatsappNumber = "5493541377939";
   const currentYear = new Date().getFullYear();
+  const whatsappNumber = "5493541377939";
+  
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-gray-900 text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="mb-4 text-emerald-400">🌿 Nutrición y Viandas</h3>
-            <p className="text-gray-400 mb-4">
-              Transformando vidas a través de la alimentación consciente y el respaldo profesional.
+            <h3 className="text-xl font-bold mb-4">🍎 Nutrición & Viandas</h3>
+            <p className="text-gray-400 text-sm">
+              Comida saludable preparada con amor y ciencia para potenciar tu bienestar.
             </p>
-            <div className="flex gap-4">
-              <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="bg-emerald-600 hover:bg-emerald-700 px-4 py-2 rounded-lg transition-colors inline-flex items-center gap-2">
+          </div>
+          
+          <div>
+            <h4 className="font-semibold mb-4">Navegación</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">Inicio</a></li>
+              <li><a href="#viandas" className="text-gray-400 hover:text-emerald-400 transition-colors">Viandas</a></li>
+              <li><a href="#servicios" className="text-gray-400 hover:text-emerald-400 transition-colors">Servicios</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold mb-4">Contacto</h4>
+            <ul className="space-y-2 text-sm">
+              <li className="flex items-center gap-2">
                 <span>📱</span>
-                <span>WhatsApp</span>
-              </a>
-            </div>
-          </div>
-          <div>
-            <h4 className="mb-4 text-emerald-400">Navegación</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#viandas" className="hover:text-emerald-400 transition-colors">🥗 Nuestras Viandas</a></li>
-              <li><a href="#servicios" className="hover:text-emerald-400 transition-colors">🎓 Servicios Profesionales</a></li>
-              <li><a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">💬 Contacto</a></li>
+                <a href={`https://wa.me/${whatsappNumber}`} className="text-gray-400 hover:text-emerald-400 transition-colors">
+                  WhatsApp
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <span>📧</span>
+                <a href="mailto:nutricion@viandas.com" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                  nutricion@viandas.com
+                </a>
+              </li>
             </ul>
           </div>
+          
           <div>
-            <h4 className="mb-4 text-emerald-400">Horarios de Atención</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li>⏰ Lunes a Viernes: 9:00 - 14:00</li>
-              <li>📋 Pedidos hasta las 11:30 hs</li>
-              <li>📍 Villa Carlos Paz, Córdoba, Argentina</li>
-              <li>🚚 Reparto gratuito en Villa Carlos Paz</li>
-            </ul>
+            <h4 className="font-semibold mb-4">Horarios</h4>
+            <p className="text-gray-400 text-sm">Lun a Vie: 9:00 - 20:00</p>
+            <p className="text-gray-400 text-sm">Sábados: 10:00 - 14:00</p>
           </div>
         </div>
-        <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p className="mb-2">© {currentYear} Nutrición y Viandas. Todos los derechos reservados.</p>
-          <p className="text-sm">Diseñado con 💚 para tu bienestar</p>
+        
+        <div className="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
+          <p>&copy; {currentYear} Nutrición y Viandas Saludables. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
