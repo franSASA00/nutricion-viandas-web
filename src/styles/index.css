@@ -96,3 +96,23 @@ a,
     max-width: 1280px;
   }
 }
+/* Mejoras para contenido educativo */
+.space-y-8 > * + * {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .space-y-8 > * + * {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Texto legible en móvil */
+.text-justify {
+  text-align: justify;
+}
+
+/* Mejor espaciado en listas */
+ul, ol {
+  padding-left: 1.5rem;
+}
