@@ -3,7 +3,7 @@ export function Servicios() {
     {
       icono: "🏠",
       titulo: "100% Casero",
-      descripcion: "En casa, con ingredientes de calidad y amor en cada preparación"
+      descripcion: "Preparado como en casa, con ingredientes frescos de calidad"
     },
     {
       icono: "👩‍🍳",
@@ -16,7 +16,7 @@ export function Servicios() {
       descripcion: "Seleccionamos los mejores productos para tus viandas"
     },
     {
-      icono: "📦",
+      icono: "🚚",
       titulo: "Delivery Sin Cargo",
       descripcion: "Envío gratis en pedidos de 5 viandas o más"
     }
@@ -25,7 +25,6 @@ export function Servicios() {
   return (
     <section className="py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        {/* Título de la sección */}
         <div className="text-center mb-10 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
             Nuestros Servicios
@@ -35,7 +34,6 @@ export function Servicios() {
           </p>
         </div>
 
-        {/* Grid de servicios - responsive */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {servicios.map((servicio, index) => (
             <div 
@@ -53,7 +51,6 @@ export function Servicios() {
           ))}
         </div>
 
-        {/* Beneficio adicional */}
         <div className="mt-10 md:mt-12 bg-emerald-50 rounded-2xl p-6 max-w-3xl mx-auto text-center">
           <p className="text-emerald-800 font-medium text-lg">
             🌟 Beneficio Especial
