@@ -14,9 +14,10 @@ export default {
         'xl': '1280px',
         '2xl': '1536px',
       },
-      spacing: {
-        '18': '4.5rem',
-        '88': '22rem',
+      colors: {
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        'muted-foreground': "hsl(var(--muted-foreground))",
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
