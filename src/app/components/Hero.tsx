@@ -1,5 +1,5 @@
 export function Hero() {
-  const whatsappNumber = "5491123456789";
+  const whatsappNumber = "543541377939";
   const handleCTA = () => {
     const message = encodeURIComponent("¡Hola! Vengo de la web. Quiero conocer más sobre las viandas y servicios de nutrición.");
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
@@ -50,10 +50,10 @@ export function Hero() {
           </div>
           <div>
             <div style={{ fontFamily: "'Georgia', serif", fontWeight: 700, fontSize: 16, color: '#1a4a2b', letterSpacing: '-0.02em' }}>
-              Nutrición &amp; Viandas
+              Lic. María Eugenia Álvarez
             </div>
             <div style={{ fontSize: 10, color: '#6b8f71', letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: 'system-ui' }}>
-              Lic. en Nutrición
+              Lic. María Eugenia Álvarez
             </div>
           </div>
         </div>
@@ -262,7 +262,7 @@ export function Hero() {
             color: 'white',
           }}>
             <div style={{ fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', opacity: 0.7, fontFamily: 'system-ui' }}>Entrega</div>
-            <div style={{ fontSize: 14, fontWeight: 600, fontFamily: 'system-ui', marginTop: 2 }}>Carlos Paz y zona</div>
+            <div style={{ fontSize: 14, fontWeight: 600, fontFamily: 'system-ui', marginTop: 2 }}>Carlos Paz (sin Colinas)</div>
           </div>
         </div>
       </div>

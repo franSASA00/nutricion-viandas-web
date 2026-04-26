@@ -80,7 +80,7 @@ const categoryColors: Record<string, string> = {
 };
 
 export function Viandas() {
-  const whatsappNumber = "5491123456789";
+  const whatsappNumber = "543541377939";
 
   const handleViandaClick = (vianda: Vianda) => {
     const message = encodeURIComponent(

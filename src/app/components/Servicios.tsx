@@ -24,14 +24,14 @@ const servicios: Servicio[] = [
 ];
 
 const credenciales = [
-  { icono: "🎓", titulo: "Lic. en Nutrición", subtitulo: "Título universitario certificado" },
+  { icono: "🎓", titulo: "Lic. María Eugenia Álvarez", subtitulo: "Título universitario certificado" },
   { icono: "🔬", titulo: "Evidencia científica", subtitulo: "Protocolos basados en investigación" },
   { icono: "📋", titulo: "Seguimiento clínico", subtitulo: "Registro y ajuste continuo" },
   { icono: "💚", titulo: "Enfoque integral", subtitulo: "Salud física y relación con la comida" },
 ];
 
 export function Servicios() {
-  const whatsappNumber = "5491123456789";
+  const whatsappNumber = "543541377939";
 
   const handleServicioClick = (servicio: Servicio) => {
     const message = encodeURIComponent(

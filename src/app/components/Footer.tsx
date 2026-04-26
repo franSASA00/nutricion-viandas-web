@@ -1,5 +1,5 @@
 export function Footer() {
-  const whatsappNumber = "5491123456789";
+  const whatsappNumber = "543541377939";
   const currentYear = new Date().getFullYear();
 
   return (
@@ -64,8 +64,8 @@ export function Footer() {
                 </svg>
               </div>
               <div>
-                <div style={{ fontFamily: "'Georgia', serif", fontWeight: 700, fontSize: 16, color: 'white' }}>Nutrición &amp; Viandas</div>
-                <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: 'system-ui' }}>Lic. en Nutrición</div>
+                <div style={{ fontFamily: "'Georgia', serif", fontWeight: 700, fontSize: 16, color: 'white' }}>Lic. María Eugenia Álvarez</div>
+                <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.4)', letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: 'system-ui' }}>Nutrición &amp; Viandas</div>
               </div>
             </div>
             <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.5)', fontFamily: 'system-ui', lineHeight: 1.7, maxWidth: 320, margin: '0 0 24px' }}>
@@ -73,7 +73,7 @@ export function Footer() {
             </p>
             <div style={{ display: 'flex', gap: 12 }}>
               <div style={{ padding: '6px 14px', background: 'rgba(255,255,255,0.06)', borderRadius: 6, border: '1px solid rgba(255,255,255,0.1)', fontSize: 12, color: 'rgba(255,255,255,0.6)', fontFamily: 'system-ui' }}>
-                Carlos Paz · Córdoba
+                Carlos Paz (sin Colinas)
               </div>
               <div style={{ padding: '6px 14px', background: 'rgba(255,255,255,0.06)', borderRadius: 6, border: '1px solid rgba(255,255,255,0.1)', fontSize: 12, color: 'rgba(255,255,255,0.6)', fontFamily: 'system-ui' }}>
                 Entrega a domicilio
@@ -109,8 +109,8 @@ export function Footer() {
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {[
-                { dia: 'Lunes — Viernes', horario: '9:00 – 19:00' },
-                { dia: 'Sábados', horario: '10:00 – 14:00' },
+                { dia: 'Viandas (pedidos)', horario: '8:00 – 11:30' },
+                { dia: 'Nutricionista', horario: '15:00 – 19:00' },
                 { dia: 'Domingos', horario: 'Cerrado' },
               ].map(({ dia, horario }) => (
                 <div key={dia}>
