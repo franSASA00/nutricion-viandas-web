@@ -3,7 +3,6 @@ interface Servicio {
   titulo: string;
   descripcion: string;
   beneficios: string[];
-  emoji: string;
   tipo: "curso" | "asesoria";
 }
 
@@ -12,136 +11,178 @@ const servicios: Servicio[] = [
     id: "asesoria-personalizada",
     titulo: "Asesoría Nutricional Personalizada",
     descripcion: "Consultas individuales con Licenciada en Nutrición. Plan alimentario adaptado a tus objetivos, análisis de composición corporal y seguimiento continuo.",
-    beneficios: [
-      "Plan alimentario personalizado",
-      "Seguimiento mensual",
-      "Análisis antropométrico",
-      "Educación alimentaria"
-    ],
-    emoji: "🎯",
+    beneficios: ["Plan alimentario personalizado", "Seguimiento mensual", "Análisis antropométrico", "Educación alimentaria"],
     tipo: "asesoria"
   },
   {
     id: "paquete-integral",
     titulo: "Paquete Integral: Viandas + Asesoría",
     descripcion: "El combo perfecto: viandas semanales diseñadas específicamente para tu plan nutricional + seguimiento profesional mensual.",
-    beneficios: [
-      "Viandas personalizadas",
-      "Consultas mensuales",
-      "Ajustes continuos",
-      "Precio preferencial"
-    ],
-    emoji: "✨",
+    beneficios: ["Viandas personalizadas", "Consultas mensuales", "Ajustes continuos", "Precio preferencial"],
     tipo: "asesoria"
   }
 ];
 
+const credenciales = [
+  { icono: "🎓", titulo: "Lic. en Nutrición", subtitulo: "Título universitario certificado" },
+  { icono: "🔬", titulo: "Evidencia científica", subtitulo: "Protocolos basados en investigación" },
+  { icono: "📋", titulo: "Seguimiento clínico", subtitulo: "Registro y ajuste continuo" },
+  { icono: "💚", titulo: "Enfoque integral", subtitulo: "Salud física y relación con la comida" },
+];
+
 export function Servicios() {
-  const whatsappNumber = "5491123456789"; // Reemplazar con el número real
+  const whatsappNumber = "5491123456789";
 
   const handleServicioClick = (servicio: Servicio) => {
     const message = encodeURIComponent(
       `¡Hola! Vengo de la web. Me interesa el servicio:\n\n` +
-      `📚 Servicio: ${servicio.titulo}\n` +
-      `📋 Tipo: ${servicio.tipo === 'curso' ? 'Curso de Formación' : 'Asesoría Nutricional'}\n\n` +
+      `📚 Servicio: ${servicio.titulo}\n\n` +
       `¿Podrían darme más información sobre fechas, inversión y modalidad?`
     );
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-emerald-50 via-white to-green-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="mb-4">
-            Servicios Profesionales de Nutrición 🎓
+    <section id="servicios" style={{ background: 'white', padding: '100px 0' }}>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 48px' }}>
+
+        {/* Header */}
+        <div style={{ marginBottom: 64 }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 20 }}>
+            <div style={{ width: 32, height: 2, background: '#1a4a2b' }} />
+            <span style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#1a4a2b', fontFamily: 'system-ui', fontWeight: 700 }}>
+              Servicios Profesionales
+            </span>
+          </div>
+          <h2 style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 700, color: '#0d2b18', letterSpacing: '-0.03em', lineHeight: 1.2, marginBottom: 16 }}>
+            Más allá del plato: acompañamiento clínico real
           </h2>
-          <p className="text-muted-foreground">
-            Más que viandas: transformamos tu relación con la comida a través de la <strong>ciencia y el acompañamiento profesional</strong>.
-            Respaldo académico, resultados reales.
+          <p style={{ fontSize: 16, color: '#4a6650', fontFamily: 'system-ui', lineHeight: 1.6, maxWidth: 520 }}>
+            Transformar tu alimentación requiere ciencia, seguimiento y contexto personal. No dietas de moda: un plan que funciona para tu cuerpo y tu vida.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
-          {servicios.map((servicio) => (
+        {/* Servicios cards */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 28, marginBottom: 64 }}>
+          {servicios.map((servicio, idx) => (
             <div
               key={servicio.id}
-              className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-emerald-200"
+              style={{
+                borderRadius: 14,
+                overflow: 'hidden',
+                border: idx === 1 ? '2px solid #1a4a2b' : '1px solid rgba(26,74,43,0.12)',
+                background: idx === 1 ? '#f2f8f4' : 'white',
+                position: 'relative',
+              }}
             >
-              <div className="flex items-start gap-4 mb-6">
-                <div className="text-5xl">{servicio.emoji}</div>
-                <div className="flex-1">
-                  <div className="inline-block bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm mb-3">
-                    {servicio.tipo === 'curso' ? '📖 Curso' : '👨‍⚕️ Asesoría'}
-                  </div>
-                  <h3 className="mb-3 text-gray-900">{servicio.titulo}</h3>
+              {idx === 1 && (
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  background: '#1a4a2b',
+                  color: 'white',
+                  textAlign: 'center',
+                  padding: '8px',
+                  fontSize: 11,
+                  letterSpacing: '0.14em',
+                  textTransform: 'uppercase',
+                  fontFamily: 'system-ui',
+                  fontWeight: 700,
+                }}>
+                  Más elegido
                 </div>
+              )}
+              <div style={{ padding: idx === 1 ? '52px 36px 36px' : '36px' }}>
+                <div style={{
+                  display: 'inline-block',
+                  fontSize: 11,
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  color: '#1a4a2b',
+                  background: 'rgba(26,74,43,0.08)',
+                  border: '1px solid rgba(26,74,43,0.2)',
+                  padding: '4px 12px',
+                  borderRadius: 100,
+                  fontFamily: 'system-ui',
+                  fontWeight: 600,
+                  marginBottom: 20,
+                }}>
+                  {servicio.tipo === 'asesoria' ? 'Asesoría Clínica' : 'Curso'}
+                </div>
+
+                <h3 style={{ fontFamily: "'Georgia', serif", fontSize: 20, fontWeight: 700, color: '#0d2b18', margin: '0 0 14px', lineHeight: 1.3 }}>
+                  {servicio.titulo}
+                </h3>
+                <p style={{ fontSize: 14, color: '#5a7460', fontFamily: 'system-ui', lineHeight: 1.7, marginBottom: 24 }}>
+                  {servicio.descripcion}
+                </p>
+
+                <div style={{ marginBottom: 28 }}>
+                  <div style={{ fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#1a4a2b', fontFamily: 'system-ui', fontWeight: 700, marginBottom: 12 }}>
+                    Incluye
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                    {servicio.beneficios.map((b, i) => (
+                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                        <div style={{ width: 20, height: 20, borderRadius: '50%', background: '#1a4a2b', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                          <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
+                            <path d="M2 6l3 3 5-5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        <span style={{ fontSize: 14, color: '#3d5a43', fontFamily: 'system-ui' }}>{b}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => handleServicioClick(servicio)}
+                  style={{
+                    width: '100%',
+                    background: idx === 1 ? '#1a4a2b' : 'white',
+                    color: idx === 1 ? 'white' : '#1a4a2b',
+                    border: idx === 1 ? 'none' : '1.5px solid #1a4a2b',
+                    padding: '14px',
+                    borderRadius: 8,
+                    fontSize: 14,
+                    fontFamily: 'system-ui',
+                    fontWeight: 600,
+                    cursor: 'pointer',
+                    letterSpacing: '0.04em',
+                  }}
+                >
+                  Consultar disponibilidad
+                </button>
               </div>
-
-              <p className="text-muted-foreground mb-6">
-                {servicio.descripcion}
-              </p>
-
-              <div className="space-y-3 mb-6">
-                <h4 className="text-emerald-700 text-sm">Lo que incluye:</h4>
-                <ul className="space-y-2">
-                  {servicio.beneficios.map((beneficio, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-muted-foreground">
-                      <span className="text-emerald-600 mt-1">✓</span>
-                      <span>{beneficio}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <button
-                onClick={() => handleServicioClick(servicio)}
-                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg inline-flex items-center justify-center gap-2"
-              >
-                <span>Consultar disponibilidad</span>
-                <span>📱</span>
-              </button>
             </div>
           ))}
         </div>
 
-        <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-10 border-2 border-emerald-100">
-          <div className="text-center mb-8">
-            <h3 className="mb-3 text-gray-900">¿Por qué elegirnos?</h3>
-            <p className="text-muted-foreground">
-              No somos influencers de dietas de moda. Somos profesionales con respaldo científico y compromiso real con tu salud.
+        {/* Credenciales */}
+        <div style={{
+          background: '#f8faf8',
+          borderRadius: 14,
+          padding: '48px',
+          border: '1px solid rgba(26,74,43,0.08)',
+        }}>
+          <div style={{ textAlign: 'center', marginBottom: 40 }}>
+            <h3 style={{ fontFamily: "'Georgia', serif", fontSize: 22, fontWeight: 700, color: '#0d2b18', margin: '0 0 10px' }}>
+              ¿Por qué confiar en nuestro trabajo?
+            </h3>
+            <p style={{ fontSize: 14, color: '#5a7460', fontFamily: 'system-ui', margin: 0 }}>
+              No somos influencers de dietas. Somos profesionales con formación académica y resultados medibles.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center p-4">
-              <div className="text-3xl mb-3">🔬</div>
-              <h4 className="mb-2 text-emerald-700">Ciencia, no tendencias</h4>
-              <p className="text-muted-foreground text-sm">Basado en evidencia científica actualizada</p>
-            </div>
-            <div className="text-center p-4">
-              <div className="text-3xl mb-3">🎓</div>
-              <h4 className="mb-2 text-emerald-700">Formación profesional</h4>
-              <p className="text-muted-foreground text-sm">Licenciada en Nutrición certificada</p>
-            </div>
-            <div className="text-center p-4">
-              <div className="text-3xl mb-3">💚</div>
-              <h4 className="mb-2 text-emerald-700">Acompañamiento real</h4>
-              <p className="text-muted-foreground text-sm">Seguimiento continuo y personalizado</p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <button
-              onClick={() => {
-                const message = encodeURIComponent("¡Hola! Me gustaría conocer más sobre los servicios de nutrición profesional");
-                window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
-              }}
-              className="bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white px-10 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center gap-3"
-            >
-              <span>💬</span>
-              <span>Comencemos tu camino hacia una vida mejor</span>
-            </button>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
+            {credenciales.map(({ icono, titulo, subtitulo }) => (
+              <div key={titulo} style={{ textAlign: 'center', padding: '24px 16px', background: 'white', borderRadius: 10, border: '1px solid rgba(26,74,43,0.08)' }}>
+                <div style={{ fontSize: 32, marginBottom: 12 }}>{icono}</div>
+                <div style={{ fontFamily: "'Georgia', serif", fontSize: 15, fontWeight: 700, color: '#0d2b18', marginBottom: 6 }}>{titulo}</div>
+                <div style={{ fontSize: 12, color: '#6b8f71', fontFamily: 'system-ui', lineHeight: 1.5 }}>{subtitulo}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
