@@ -249,21 +249,29 @@ export function Hero() {
               <span style={{ fontSize: 14, fontWeight: 600, color: '#0d2b18', fontFamily: 'system-ui' }}>Diaria · Sin conservantes</span>
             </div>
           </div>
+        </div>
 
-          {/* Floating pill */}
-          <div style={{
-            position: 'absolute',
-            bottom: -16,
-            left: -24,
-            background: '#1a4a2b',
-            borderRadius: 10,
-            padding: '12px 20px',
-            boxShadow: '0 8px 24px rgba(26,74,43,0.3)',
-            color: 'white',
-          }}>
-            <div style={{ fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', opacity: 0.7, fontFamily: 'system-ui' }}>Entrega</div>
-            <div style={{ fontSize: 14, fontWeight: 600, fontFamily: 'system-ui', marginTop: 2 }}>Carlos Paz (sin Colinas)</div>
+        {/* Delivery pill debajo de la imagen */}
+        <div style={{
+          marginTop: 20,
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: 10,
+          background: '#1a4a2b',
+          borderRadius: 10,
+          padding: '12px 20px',
+          boxShadow: '0 4px 16px rgba(26,74,43,0.2)',
+          color: 'white',
+        }}>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+            <circle cx="12" cy="9" r="2.5"/>
+          </svg>
+          <div>
+            <span style={{ fontSize: 11, opacity: 0.7, fontFamily: 'system-ui', marginRight: 6 }}>Entrega:</span>
+            <span style={{ fontSize: 14, fontWeight: 600, fontFamily: 'system-ui' }}>Carlos Paz (sin Colinas)</span>
           </div>
+        </div>
         </div>
       </div>
 
