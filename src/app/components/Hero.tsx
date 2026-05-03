@@ -230,7 +230,7 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Floating badge */}
+          {/* Floating badge - top right */}
           <div style={{
             position: 'absolute',
             top: -20,
@@ -249,30 +249,30 @@ export function Hero() {
               <span style={{ fontSize: 14, fontWeight: 600, color: '#0d2b18', fontFamily: 'system-ui' }}>Diaria · Sin conservantes</span>
             </div>
           </div>
-        </div>
 
-        {/* Delivery pill debajo de la imagen */}
-        <div style={{
-          marginTop: 20,
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: 10,
-          background: '#1a4a2b',
-          borderRadius: 10,
-          padding: '12px 20px',
-          boxShadow: '0 4px 16px rgba(26,74,43,0.2)',
-          color: 'white',
-        }}>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-            <circle cx="12" cy="9" r="2.5"/>
-          </svg>
-          <div>
-            <span style={{ fontSize: 11, opacity: 0.7, fontFamily: 'system-ui', marginRight: 6 }}>Entrega:</span>
-            <span style={{ fontSize: 14, fontWeight: 600, fontFamily: 'system-ui' }}>Carlos Paz (sin Colinas)</span>
+          {/* Delivery pill - debajo de la imagen, dentro de la columna derecha */}
+          <div style={{
+            marginTop: 16,
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 10,
+            background: '#1a4a2b',
+            borderRadius: 10,
+            padding: '12px 20px',
+            boxShadow: '0 4px 16px rgba(26,74,43,0.2)',
+            color: 'white',
+          }}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            <div>
+              <span style={{ fontSize: 11, opacity: 0.7, fontFamily: 'system-ui', marginRight: 6 }}>Entrega:</span>
+              <span style={{ fontSize: 14, fontWeight: 600, fontFamily: 'system-ui' }}>Carlos Paz (sin Colinas)</span>
+            </div>
           </div>
         </div>
-        </div>
+
       </div>
 
       {/* Bottom scroll cue */}
