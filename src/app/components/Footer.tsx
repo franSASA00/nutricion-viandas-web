@@ -108,16 +108,28 @@ export function Footer() {
               Atención
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-              {[
-                { dia: 'Viandas (pedidos)', horario: '8:00 – 11:30' },
-                { dia: 'Nutricionista', horario: '15:00 – 19:00' },
-                { dia: 'Domingos', horario: 'Cerrado' },
-              ].map(({ dia, horario }) => (
-                <div key={dia}>
-                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', fontFamily: 'system-ui', marginBottom: 2 }}>{dia}</div>
-                  <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.75)', fontFamily: 'system-ui', fontWeight: 500 }}>{horario}</div>
+
+              {/* Viandas — con sub-línea de reparto */}
+              <div>
+                <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', fontFamily: 'system-ui', marginBottom: 2 }}>Viandas (pedidos)</div>
+                <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.75)', fontFamily: 'system-ui', fontWeight: 500 }}>8:00 – 11:30</div>
+                <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', fontFamily: 'system-ui', marginTop: 4 }}>
+                  Reparto: <span style={{ color: 'rgba(255,255,255,0.6)', fontWeight: 500 }}>12:00 – 15:00</span>
                 </div>
-              ))}
+              </div>
+
+              {/* Nutricionista */}
+              <div>
+                <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', fontFamily: 'system-ui', marginBottom: 2 }}>Nutricionista</div>
+                <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.75)', fontFamily: 'system-ui', fontWeight: 500 }}>15:00 – 19:00</div>
+              </div>
+
+              {/* Domingos */}
+              <div>
+                <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', fontFamily: 'system-ui', marginBottom: 2 }}>Domingos</div>
+                <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.75)', fontFamily: 'system-ui', fontWeight: 500 }}>Cerrado</div>
+              </div>
+
             </div>
           </div>
         </div>
