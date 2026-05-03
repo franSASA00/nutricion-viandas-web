@@ -126,7 +126,7 @@ export function Footer() {
 
               {/* Domingos */}
               <div>
-                <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', fontFamily: 'system-ui', marginBottom: 2 }}>Domingos</div>
+                <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', fontFamily: 'system-ui', marginBottom: 2 }}>Sábados y domingos</div>
                 <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.75)', fontFamily: 'system-ui', fontWeight: 500 }}>Cerrado</div>
               </div>
 
