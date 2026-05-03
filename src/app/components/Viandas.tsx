@@ -11,72 +11,30 @@ interface Vianda {
 
 const viandas: Vianda[] = [
   {
-    id: "control-peso-1",
-    nombre: "Bowl Mediterráneo",
-    descripcion: "Quinoa, vegetales asados, garbanzos y aderezo de limón. Equilibrado y saciante.",
-    categoria: "Control de Peso",
-    imagen: "https://images.unsplash.com/photo-1546069901-04dcb46a5e26?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-    beneficios: ["Alto en fibra", "Bajo en calorías", "Proteína vegetal"],
-    precio: "$8.500",
-    kcal: "380 kcal"
-  },
-  {
-    id: "control-peso-2",
+    id: "vianda-del-dia",
     nombre: "Pollo Grillé con Verduras",
     descripcion: "Pechuga a la plancha con mix de vegetales al vapor y batata horneada.",
-    categoria: "Control de Peso",
+    categoria: "Vianda del Día",
     imagen: "https://images.unsplash.com/photo-1642635055753-3eec6c0b2a6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
     beneficios: ["Alto en proteínas", "Bajo en grasas", "Rico en vitaminas"],
     precio: "$9.200",
     kcal: "420 kcal"
   },
   {
-    id: "hipertrofia-1",
-    nombre: "Power Beef Bowl",
-    descripcion: "Carne magra con arroz yamaní, brócoli, espinaca y huevo duro.",
-    categoria: "Hipertrofia",
-    imagen: "https://images.unsplash.com/photo-1720443000468-89d509202615?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-    beneficios: ["Alto en proteínas", "Carbohidratos complejos", "Hierro y zinc"],
-    precio: "$10.800",
-    kcal: "620 kcal"
-  },
-  {
-    id: "hipertrofia-2",
-    nombre: "Salmón con Arroz Integral",
-    descripcion: "Filet al horno con arroz integral, espárragos y palta. Omega-3 para tu rendimiento.",
-    categoria: "Hipertrofia",
-    imagen: "https://images.unsplash.com/photo-1607264021653-0a884a9740cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-    beneficios: ["Proteína de calidad", "Grasas saludables", "Anti-inflamatorio"],
-    precio: "$12.500",
-    kcal: "580 kcal"
-  },
-  {
     id: "veggie-1",
     nombre: "Buddha Bowl Vegano",
     descripcion: "Garbanzos especiados, quinoa, kale, zanahoria y tahini.",
-    categoria: "Veggie",
+    categoria: "Opción Veggie",
     imagen: "https://images.unsplash.com/photo-1620019989479-d52fcedd99fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
     beneficios: ["100% vegano", "Rico en antioxidantes", "Completo nutricionalmente"],
     precio: "$8.800",
     kcal: "410 kcal"
   },
-  {
-    id: "express-1",
-    nombre: "Wrap Fitness Express",
-    descripcion: "Wrap integral con pollo, lechuga, tomate, zanahoria y salsa yogurt.",
-    categoria: "Express",
-    imagen: "https://images.unsplash.com/photo-1662714208483-3480ccd2de39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
-    beneficios: ["Rápido", "Portátil", "Completo"],
-    precio: "$7.500",
-    kcal: "340 kcal"
-  },
 ];
 
 const categoryColors: Record<string, string> = {
-  "Control de Peso": "#2d6a4f",
-  "Hipertrofia": "#1d3557",
-  "Veggie": "#386641",
-  "Express": "#6b4226",
+  "Vianda del Día": "#2d6a4f",
+  "Opción Veggie": "#386641",
 };
 
 export function Viandas() {
@@ -112,7 +70,7 @@ export function Viandas() {
           </p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 28 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 28, maxWidth: 860, margin: '0 auto' }}>
           {viandas.map((vianda) => (
             <div
               key={vianda.id}
@@ -120,7 +78,7 @@ export function Viandas() {
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.boxShadow = '0 12px 40px rgba(26,74,43,0.14)'; (e.currentTarget as HTMLElement).style.transform = 'translateY(-4px)'; }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = '0 2px 16px rgba(0,0,0,0.06)'; (e.currentTarget as HTMLElement).style.transform = 'translateY(0)'; }}
             >
-              <div style={{ position: 'relative', height: 200, overflow: 'hidden', background: '#e8f0ea' }}>
+              <div style={{ position: 'relative', height: 220, overflow: 'hidden', background: '#e8f0ea' }}>
                 <img src={vianda.imagen} alt={vianda.nombre} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 <div style={{ position: 'absolute', top: 14, left: 14, background: categoryColors[vianda.categoria] || '#1a4a2b', color: 'white', padding: '4px 12px', borderRadius: 4, fontSize: 11, fontFamily: 'system-ui', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase' }}>
                   {vianda.categoria}
